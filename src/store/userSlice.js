@@ -7,6 +7,7 @@ const userSlice = createSlice({
         token: "",
         isAuth: false,
         userName: "",
+        todo:'',
     },
     reducers: {
         addToken: (state, action) => {
@@ -19,9 +20,13 @@ const userSlice = createSlice({
         clearState: (state) => {
             state = userSlice.initialState;
         },
+        addTodo : (state, action) => {
+            
+            state.todo=action.payload;
+        }
     },
 });
 
-export const { addToken, addUserName, clearState } = userSlice.actions;
+export const { addToken, addUserName, clearState, addTodo } = userSlice.actions;
 
 export default userSlice.reducer;

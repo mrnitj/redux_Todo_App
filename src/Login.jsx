@@ -8,9 +8,10 @@ const Login = () => {
     const isAuth = useSelector((state) => state.user.isAuth);
     const navigate = useNavigate();
 
-    const token = useSelector((state) => state.user.userName);
+    const token = useSelector((state) => state.user.token);
 
     console.log(token);
+    localStorage.setItem('token', token)
 
     if (isAuth) {
         navigate("/");

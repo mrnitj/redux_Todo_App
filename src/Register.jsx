@@ -9,7 +9,7 @@ import { addToken } from './store/userSlice';
 const Register = () => {
 
 
-    const userRef = React.useRef(null);
+  const userRef = React.useRef(null);
   const passRef = React.useRef(null);
   const apiKey = useSelector((state) => state.user.apiKey);
   const navigate = useNavigate();
